@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  transition: all .3s;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: #212121;
+  font-size: 16px;
+  color: #333;
+  padding: 2rem 0;
+}
+
+.body--error {
+  background: #D95F5B;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 500;
+  margin: 0 auto 1em;
+}
+
+form {
+  width: 96%;
+  max-width: 700px;
+  margin: 1.25rem auto;
+  color: rgba(255,255,255,.8);
+}
+
+input {
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1.25rem;
+  display: block;
+  background: rgba(255,255,255,.1);
+  border: 2px solid rgba(255,255,255,.2);
+  outline: 0;
+  font-weight: 300;
+  color: inherit;
+  width: 100%;
+  border-radius: 3px;
+}
+
+input:focus {
+  border-color: rgba(255,255,255,.4);
+}
+
+.count {
+  transition: all .3s;
+  position: absolute;
+  right: 1rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: #009688;
+  border: 2px solid rgba(255,255,255,.4);
+}
+
+.count__content {
+  display: none;
+  transition: all .3s;
+}
+
+.count:before {
+  transition: all .3s;
+  content: "\2713";
+}
+
+.body--error .count {
+  background: #D95F5B;
+}
+
+.body--error .count__content {
+  display: block;
+}
+
+.body--error .count:before {
+  display: none;
+}
+
+.emailClient {
+  background: white;
+  border-width: 1.25rem 3.75rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 2rem;
+  max-width: 50rem;
+  width: 96%;
+  height: 25rem;
+  margin: 2rem auto;
+  overflow: auto;
+  box-shadow: 0 0 0 .25rem #c9c9c9, 0 0 .25rem .25rem rgba(255, 255, 255, 0.33);
+}
+
+
+.emailClient__description {
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.25rem;
+}
+
+.body--error .emailClient__description {
+  opacity: 0;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.emailClient__description a {
+  color: #009587;
+  text-decoration: none;
+}
+
+.emailClient__description p {
+  line-height: 1.65rem;
+  font-weight: 300;
+}
+
+.email {
+  border-bottom: 1px solid #cccccc;
+  padding: .875rem .625rem;
+}
+
+.email:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.email__subject {
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.email__from {
+  float: left;
+}
+
+.email__date {
+  float: right;
+}
+
+.email__from, .email__date {
+  font-size: .9rem;
+}
+
+.highlight {
+  background: #f8dfdf;
+  padding: 1px 4px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+footer {
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  font-weight: 300;
+}
+
+footer a {
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255,255,255,.7);
+}
+
+footer a:hover {
+  color: rgba(255,255,255,.9);
+}
