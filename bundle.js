@@ -7,7 +7,7 @@ var placeholderKickoff = require('./placeholder');
 var ellipses = 3;
 var cuss = require('cuss');
 var profanities = filterOutContextualBadWords(cuss).reverse();
-var profanitiesRegex = new RegExp('\\s(' + profanities.join('|') + ')', 'ig');
+var profanitiesRegex = new RegExp('(?:\\s|^)(' + profanities.join('|') + ')', 'ig');
 
 var emailClient = document.getElementsByClassName('emailClient__emails')[0];
 var count = document.getElementsByClassName('count__content')[0];

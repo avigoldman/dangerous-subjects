@@ -4,7 +4,7 @@ const placeholderKickoff = require('./placeholder')
 const ellipses = 3
 const cuss = require('cuss')
 const profanities = filterOutContextualBadWords(cuss).reverse()
-const profanitiesRegex = new RegExp(`\\s(${profanities.join('|')})`, 'ig')
+const profanitiesRegex = new RegExp(`(?:\\s|^)(${profanities.join('|')})`, 'ig')
 
 const emailClient = document.getElementsByClassName('emailClient__emails')[0]
 const count = document.getElementsByClassName('count__content')[0]
